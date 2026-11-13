@@ -1,0 +1,23 @@
+[project]
+name = "balatro-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Arshia Aravinthan", email = "aravinta@uci.edu" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jackdaw",
+    "torch>=2.15.0",
+]
+
+[project.scripts]
+balatro-bot = "balatro_bot:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+jackdaw = { url = "https://github.com/TylerFlar/jackdaw-balatro/releases/download/v0.2.3/jackdaw-0.2.3-cp312-abi3-macosx_11_0_arm64.whl" }

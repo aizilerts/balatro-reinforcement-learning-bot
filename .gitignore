@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Clone of the jackdaw-balatro env
+jackdaw-balatro/
