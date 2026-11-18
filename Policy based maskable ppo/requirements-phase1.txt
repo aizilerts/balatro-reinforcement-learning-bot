@@ -1,0 +1,3 @@
+gymnasium==1.4.0
+jackdaw==0.2.3
+numpy==2.5.4

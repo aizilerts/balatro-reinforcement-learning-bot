@@ -1,0 +1,58 @@
+{
+  "environment": {
+    "reward": "shaped",
+    "reward_kwargs": {
+      "step_cost": 0.001,
+      "shop_step_cost": 0.002,
+      "blind_beaten": 1.0,
+      "boss_beaten": 0.1,
+      "hands_left": 0.01,
+      "score_progress": 0.02,
+      "win": 1.0,
+      "loss": 1.0
+    },
+    "joker_preference": {
+      "enabled": true,
+      "x_mult_bonus": 0.04,
+      "mult_bonus": 0.025,
+      "chips_bonus": 0.01,
+      "hand_swap_penalty": 0.5,
+      "repeated_sort_penalty": 1.0,
+      "sell_joker_below_capacity_penalty": 0.5,
+      "sell_consumable_below_capacity_penalty": 0.5,
+      "use_consumable_bonus": 0.05,
+      "skip_pack_below_capacity_penalty": 0.5,
+      "joker_acquisition_bonus_when_room": 0.1
+    },
+    "max_steps": 10000,
+    "max_free_moves": 10,
+    "max_joker_swaps_per_blind": 5,
+    "on_refusal": "raise"
+  },
+  "baseline": {
+    "episodes": 10,
+    "seed_start": 10000,
+    "policy": "uniform_random_over_legal_actions"
+  },
+  "evaluation": {
+    "seed_start": 30000,
+    "episodes": 100,
+    "reward": "blind_progress"
+  },
+  "training": {
+    "seed": 12345,
+    "total_timesteps": 100000,
+    "learning_rate": 0.0003,
+    "n_steps": 2048,
+    "batch_size": 128,
+    "n_epochs": 4,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.02,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "checkpoint_freq": 10000,
+    "device": "auto"
+  }
+}

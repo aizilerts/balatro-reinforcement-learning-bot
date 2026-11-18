@@ -1,0 +1,5 @@
+-r requirements-phase1.txt
+stable-baselines3==2.9.2
+sb3-contrib==2.9.2
+torch==2.15.0
+tensorboard
